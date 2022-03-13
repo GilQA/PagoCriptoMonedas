@@ -1,16 +1,22 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+const BASE_URL = 'https://qa.apibaz.com';
+const BASE_URL_ENCRYPT = 'http://localhost:3000';
+const URL_CRIPTO = '/elektra/criptomonedas';
 
 export const environment = {
-  production: false
+  USR: 'pyK7vZvLeGCu7h0KUvuUbgzLH3LfkfmA',
+  PWD: 'VvZS07yI79gAEMmK',
+  production: false,
+  KEY: 'Do3VJxoVc9QBzMpk6/Vhh7xH0pqd+784Sva9BjNR6YY=',
+  SECURITY: {
+    AUTH: BASE_URL + '/oauth2/v1/token',
+    LLAVES_ACCESO: BASE_URL + URL_CRIPTO + '/seguridad/v1/aplicaciones/llaves',
+  },
+  ENCRIPT: {
+    AES: BASE_URL_ENCRYPT + '/encriptarLLavesAES',
+    RSA: BASE_URL_ENCRYPT + '/encriptarLLavesRSA',
+  },
+  DECRIPT: {
+    AES: BASE_URL_ENCRYPT + '/desencriptarLLavesAES',
+    RSA: BASE_URL_ENCRYPT + '/desencriptarLLavesRSA',
+  },
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

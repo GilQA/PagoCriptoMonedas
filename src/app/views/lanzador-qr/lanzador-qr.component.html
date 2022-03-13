@@ -1,0 +1,49 @@
+<ng-template #contenido let-modal>
+  <div class="modal-body">
+    <div class="contenedor-general">
+      <div class="row mb-4">
+        <div class="col-12 text-head">
+          <label>Paga con tu dispositivo</label>
+        </div>
+      </div>
+      <div class="row mb-4 text-instrucciones">
+        <div class="col-12">
+          <label class="secondary-text-instrucciones"
+            ><a class="primary-text-instrucciones">Paso 1: </a>Escanea este
+            codigo con tu dispositivo</label
+          >
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12 contenedor-qr">
+          <ngx-qrcode
+            [elementType]="elementType"
+            [value]="url"
+            [width]="200"
+            [errorCorrectionLevel]="errorCorrectionLevel"
+          >
+          </ngx-qrcode>
+        </div>
+      </div>
+      <div class="row mb-3 text-instrucciones">
+        <div class="col-12">
+          <label class="secondary-text-instrucciones"
+            ><a class="primary-text-instrucciones">Paso 2: </a>Ingresa el total
+            de tu compra en Bitcoins</label
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 contenedor-info-pago">
+          <div class="info-pago mt-2 mb-2">
+            <div class="row">
+              <label class="precio-btc"
+                >Precio en Bitcoin: <a>0.000035BTC</a></label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
