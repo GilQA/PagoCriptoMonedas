@@ -27,6 +27,7 @@ export class EncriptaDesencriptaService {
     return res;
   }
   encriptacionRSA(response: object): Observable<encriptacionRSA> {
+    console.log(response);
     const url = environment.ENCRIPT.RSA;
     let headers = new HttpHeaders({
       Authorization: `Inherit auth from parent`,
